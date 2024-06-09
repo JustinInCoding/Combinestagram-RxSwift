@@ -30,6 +30,7 @@
 
 import UIKit
 import Photos
+import RxSwift
 
 class PhotosViewController: UICollectionViewController {
   
@@ -47,6 +48,13 @@ class PhotosViewController: UICollectionViewController {
     )
   }()
   
+  //  define a private PublishSubject that will emit the selected photos
+  private let selectedPhotoSubject = PublishSubject<UIImage>()
+  // exposes the subject’s observable
+  var selectedPhotos: Observable<UIImage> {
+    return selectedPhotoSubject.asObserver()
+  }
+  
   static func loadPhotos() -> PHFetchResult<PHAsset> {
     let allPhotosOptions = PHFetchOptions()
     allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
@@ -60,6 +68,8 @@ class PhotosViewController: UICollectionViewController {
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
+    // make the subscription in main view controller disposed after finish selecting the images
+    selectedPhotoSubject.onCompleted()
   }
   
   // MARK: UICollectionView
@@ -73,6 +83,7 @@ class PhotosViewController: UICollectionViewController {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoCell
     
     cell.representedIdentifier = asset.localIdentifier
+    print(thumbnailSize)
     imageManager.requestImage(for: asset, targetSize: thumbnailSize, contentMode: .aspectFill, options: nil) { image, _ in
       if cell.representedIdentifier == asset.localIdentifier {
         cell.imageView.image = image
@@ -91,6 +102,12 @@ class PhotosViewController: UICollectionViewController {
     
     imageManager.requestImage(for: asset, targetSize: view.frame.size, contentMode: .aspectFill, options: nil) { [weak self] image, info in
       guard let image = image, let info = info else { return }
+      
+      // check if the image is the thumbnail or the full version of the asset
+      if let isThumbnail = info[PHImageResultIsDegradedKey as NSString] as? Bool, !isThumbnail {
+        // In the event you receive the full-size image, you call onNext(_) on your subject and provide it with the full photo
+        self?.selectedPhotoSubject.onNext(image)
+      }
     }
   }
   
