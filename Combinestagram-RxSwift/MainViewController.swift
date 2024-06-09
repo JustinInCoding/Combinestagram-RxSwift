@@ -78,7 +78,22 @@ class MainViewController: UIViewController {
   }
   
   @IBAction func actionSave() {
-    
+    guard let image = imagePreview.image else { return }
+    // call PhotoWriter.save(image) to save the current collage
+    PhotoWriter.save(image)
+      // convert the returned Observable to a Single
+      // ensuring your subscription will get at most one element, and display a message when it succeeds or errors out
+      .asSingle()
+      .subscribe(
+        onSuccess: { [weak self] id in
+          self?.showMessage("Saved with id: \(id)")
+          // clear the current collage if the write operation was a success
+          self?.actionClear()
+        }, onError: { [weak self] error in
+          self?.showMessage("Error", description: error.localizedDescription)
+        }
+      )
+      .disposed(by: bag)
   }
   
   @IBAction func actionAdd() {
