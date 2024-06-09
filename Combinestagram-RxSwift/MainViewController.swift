@@ -83,7 +83,8 @@ class MainViewController: UIViewController {
     PhotoWriter.save(image)
       // convert the returned Observable to a Single
       // ensuring your subscription will get at most one element, and display a message when it succeeds or errors out
-      .asSingle()
+      // uncomment it if use Observer as a return type in PhotoWriter
+//      .asSingle()
       .subscribe(
         onSuccess: { [weak self] id in
           self?.showMessage("Saved with id: \(id)")

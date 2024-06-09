@@ -38,8 +38,35 @@ class PhotoWriter {
     case couldNotSavePhoto
   }
   
-  static func save(_ image: UIImage) -> Observable<String> {
-    return Observable.create { observer in
+//  static func save(_ image: UIImage) -> Observable<String> {
+//    return Observable.create { observer in
+//      var savedAssetId: String?
+//      PHPhotoLibrary.shared().performChanges({
+//        // create a new photo asset by using PHAssetChangeRequest.creationRequestForAsset(from:)
+//        let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
+//        // store its identifier in savedAssetId
+//        savedAssetId = request.placeholderForCreatedAsset?.localIdentifier
+//      }, completionHandler: { success, error in
+//        DispatchQueue.main.async {
+//          if success, let id = savedAssetId {
+//            // If you got a success response back and savedAssetId contains a valid asset ID, you emit a .next event and a .completed event
+//            observer.onNext(id)
+//            observer.onCompleted()
+//          } else {
+//            // In case of an error, you emit either a custom or the default error.
+//            observer.onError(error ?? Errors.couldNotSavePhoto)
+//          }
+//        }
+//      })
+//      // you need to return a Disposable
+//      return Disposables.create()
+//    }
+//  }
+  
+  /** Single */
+  static func save(_ image: UIImage) -> Single<String> {
+    return Single.create(subscribe: { single in
+
       var savedAssetId: String?
       PHPhotoLibrary.shared().performChanges({
         // create a new photo asset by using PHAssetChangeRequest.creationRequestForAsset(from:)
@@ -49,18 +76,15 @@ class PhotoWriter {
       }, completionHandler: { success, error in
         DispatchQueue.main.async {
           if success, let id = savedAssetId {
-            // If you got a success response back and savedAssetId contains a valid asset ID, you emit a .next event and a .completed event
-            observer.onNext(id)
-            observer.onCompleted()
+            single(.success(id))
           } else {
-            // In case of an error, you emit either a custom or the default error.
-            observer.onError(error ?? Errors.couldNotSavePhoto)
+            single(.error(error ?? Errors.couldNotSavePhoto))
           }
         }
       })
       // you need to return a Disposable
       return Disposables.create()
-    }
+    })
   }
   
 }

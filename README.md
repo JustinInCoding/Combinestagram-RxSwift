@@ -19,7 +19,16 @@ Xcode - 13.2.1 (the version I created the project)
 
 ## Tips and Learned
 - after remove Main.storyboard, LaunchScreen.storyboard and info.plist, reset the plist filepath in build setting and check the copy Bundle Resources in Build Phrases(readd storyboard maybe)
-
+- Single
+    - .success(Value) = .next + .completed
+    - .error
+- Maybe
+    - .completed event
+    - .next event
+    - .error event
+- Completable
+    - .completed event
+    - .error event
 
 ## Acknowledgements
 Thanks for the kodeco's team providing such a great course
