@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B8C279AE1C022EF87F02D79 /* Pods_Combinestagram_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27319224BEEF91C85F4FA474 /* Pods_Combinestagram_RxSwift.framework */; };
+		985E857A2C157EA200785952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C2FB2C154853001AF7E0 /* Main.storyboard */; };
+		985E857B2C157EA200785952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C3002C154856001AF7E0 /* LaunchScreen.storyboard */; };
 		98D9C2F62C154853001AF7E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C2F52C154853001AF7E0 /* AppDelegate.swift */; };
 		98D9C2F82C154853001AF7E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C2F72C154853001AF7E0 /* SceneDelegate.swift */; };
-		98D9C2FD2C154853001AF7E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C2FB2C154853001AF7E0 /* Main.storyboard */; };
 		98D9C2FF2C154856001AF7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C2FE2C154856001AF7E0 /* Assets.xcassets */; };
-		98D9C3022C154856001AF7E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C3002C154856001AF7E0 /* LaunchScreen.storyboard */; };
 		98D9C30E2C155097001AF7E0 /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C30D2C155097001AF7E0 /* UIImage+Collage.swift */; };
 		98D9C3102C15510C001AF7E0 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C30F2C15510C001AF7E0 /* PhotoWriter.swift */; };
 		98D9C3122C1556BB001AF7E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C3112C1556BB001AF7E0 /* MainViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27319224BEEF91C85F4FA474 /* Pods_Combinestagram_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Combinestagram_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D9C2F22C154853001AF7E0 /* Combinestagram-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combinestagram-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D9C2F52C154853001AF7E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D9C2F72C154853001AF7E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		98D9C3112C1556BB001AF7E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		98D9C3132C1558C7001AF7E0 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		98D9C3152C1561FE001AF7E0 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		9FE1C0E6F34FEE074A6AD70B /* Pods-Combinestagram-RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-RxSwift.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram-RxSwift/Pods-Combinestagram-RxSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B810FA50BECD3D9529BDA9C2 /* Pods-Combinestagram-RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-Combinestagram-RxSwift/Pods-Combinestagram-RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8C279AE1C022EF87F02D79 /* Pods_Combinestagram_RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				98D9C2F42C154853001AF7E0 /* Combinestagram-RxSwift */,
 				98D9C2F32C154853001AF7E0 /* Products */,
+				B76880D467DB37738707B9FD /* Pods */,
+				FA3D72EC2581E583B184332B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +102,24 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		B76880D467DB37738707B9FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B810FA50BECD3D9529BDA9C2 /* Pods-Combinestagram-RxSwift.debug.xcconfig */,
+				9FE1C0E6F34FEE074A6AD70B /* Pods-Combinestagram-RxSwift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA3D72EC2581E583B184332B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27319224BEEF91C85F4FA474 /* Pods_Combinestagram_RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98D9C3062C154856001AF7E0 /* Build configuration list for PBXNativeTarget "Combinestagram-RxSwift" */;
 			buildPhases = (
+				FD33F90791920DF936F38EB3 /* [CP] Check Pods Manifest.lock */,
 				98D9C2EE2C154853001AF7E0 /* Sources */,
 				98D9C2EF2C154853001AF7E0 /* Frameworks */,
 				98D9C2F02C154853001AF7E0 /* Resources */,
+				F011E5B05FF668C441F92E87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,13 +180,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D9C3022C154856001AF7E0 /* LaunchScreen.storyboard in Resources */,
+				985E857A2C157EA200785952 /* Main.storyboard in Resources */,
+				985E857B2C157EA200785952 /* LaunchScreen.storyboard in Resources */,
 				98D9C2FF2C154856001AF7E0 /* Assets.xcassets in Resources */,
-				98D9C2FD2C154853001AF7E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F011E5B05FF668C441F92E87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-RxSwift/Pods-Combinestagram-RxSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-RxSwift/Pods-Combinestagram-RxSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-RxSwift/Pods-Combinestagram-RxSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD33F90791920DF936F38EB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Combinestagram-RxSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98D9C2EE2C154853001AF7E0 /* Sources */ = {
@@ -316,13 +385,14 @@
 		};
 		98D9C3072C154856001AF7E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B810FA50BECD3D9529BDA9C2 /* Pods-Combinestagram-RxSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Combinestagram-RxSwift/Info.plist";
+				INFOPLIST_FILE = "Combinestagram-RxSwift/Assets/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your device's photo library to allow you to select photos for your collage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -344,13 +414,14 @@
 		};
 		98D9C3082C154856001AF7E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE1C0E6F34FEE074A6AD70B /* Pods-Combinestagram-RxSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Combinestagram-RxSwift/Info.plist";
+				INFOPLIST_FILE = "Combinestagram-RxSwift/Assets/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your device's photo library to allow you to select photos for your collage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

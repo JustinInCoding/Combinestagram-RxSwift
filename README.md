@@ -18,7 +18,7 @@
 Xcode - 13.2.1 (the version I created the project)
 
 ## Tips and Learned
-- 
+- after remove Main.storyboard, LaunchScreen.storyboard and info.plist, reset the plist filepath in build setting and check the copy Bundle Resources in Build Phrases(readd storyboard maybe)
 
 
 ## Acknowledgements
