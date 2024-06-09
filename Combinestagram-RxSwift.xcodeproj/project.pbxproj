@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B8C279AE1C022EF87F02D79 /* Pods_Combinestagram_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27319224BEEF91C85F4FA474 /* Pods_Combinestagram_RxSwift.framework */; };
+		980A674F2C15C053000DA0B5 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A674E2C15C053000DA0B5 /* UIViewController+Rx.swift */; };
 		985E857A2C157EA200785952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C2FB2C154853001AF7E0 /* Main.storyboard */; };
 		985E857B2C157EA200785952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C3002C154856001AF7E0 /* LaunchScreen.storyboard */; };
 		98D9C2F62C154853001AF7E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C2F52C154853001AF7E0 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		27319224BEEF91C85F4FA474 /* Pods_Combinestagram_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Combinestagram_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980A674E2C15C053000DA0B5 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		98D9C2F22C154853001AF7E0 /* Combinestagram-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combinestagram-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D9C2F52C154853001AF7E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D9C2F72C154853001AF7E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				98D9C3112C1556BB001AF7E0 /* MainViewController.swift */,
 				98D9C3132C1558C7001AF7E0 /* PhotosViewController.swift */,
 				98D9C3152C1561FE001AF7E0 /* PhotoCell.swift */,
+				980A674E2C15C053000DA0B5 /* UIViewController+Rx.swift */,
 			);
 			path = "Combinestagram-RxSwift";
 			sourceTree = "<group>";
@@ -108,7 +111,6 @@
 				B810FA50BECD3D9529BDA9C2 /* Pods-Combinestagram-RxSwift.debug.xcconfig */,
 				9FE1C0E6F34FEE074A6AD70B /* Pods-Combinestagram-RxSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -241,6 +243,7 @@
 				98D9C3122C1556BB001AF7E0 /* MainViewController.swift in Sources */,
 				98D9C3142C1558C7001AF7E0 /* PhotosViewController.swift in Sources */,
 				98D9C2F82C154853001AF7E0 /* SceneDelegate.swift in Sources */,
+				980A674F2C15C053000DA0B5 /* UIViewController+Rx.swift in Sources */,
 				98D9C30E2C155097001AF7E0 /* UIImage+Collage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
