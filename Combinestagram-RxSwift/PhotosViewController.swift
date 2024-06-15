@@ -144,6 +144,10 @@ class PhotosViewController: UICollectionViewController {
   
   private func errorMessage() {
     alert(title: "No access to Camera Roll", text: "You can grant access to Combinestagram from the Settings app")
+      // have to convert your Completable to an observable via asObservable() as the take(_:scheduler:) operator is not available on the Completable type.
+      .asObservable()
+      // a filtering operator much like take(1) or takeWhile(...). take(_:scheduler:) takes elements from the source sequence for the given time period. Once the time interval has passed, the resulting sequence completes
+      .take(.seconds(5), scheduler: MainScheduler.instance)
       .subscribe(
         onCompleted: { [weak self] in
           self?.dismiss(animated: true, completion: nil)
