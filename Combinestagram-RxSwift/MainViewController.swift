@@ -102,7 +102,10 @@ class MainViewController: UIViewController {
 //    images.accept(newImages)
     // instantiate PhotosViewController from the project’s storyboard and push it onto the navigation stack
     let photosViewController = storyboard!.instantiateViewController(withIdentifier: "PhotosViewController") as! PhotosViewController
-    photosViewController.selectedPhotos
+    // `share` allow for multiple subscriptions to consume the elements that a single Observable produces for all of them
+    let newPhotos = photosViewController.selectedPhotos
+      .share()
+    newPhotos
       .subscribe(
         onNext: { [weak self] newImage in
           guard let images = self?.images else { return }
@@ -114,6 +117,22 @@ class MainViewController: UIViewController {
       )
       .disposed(by: bag)
     navigationController!.pushViewController(photosViewController, animated: true)
+    newPhotos
+      .ignoreElements()
+      .subscribe(
+        onCompleted: { [weak self] in
+          self?.updateNavigationIcon()
+        }
+      )
+      .disposed(by: bag)
+  }
+  
+  private func updateNavigationIcon() {
+    let icon = imagePreview.image?
+      .scale(CGSize(width: 22, height: 22))
+      .withRenderingMode(.alwaysOriginal)
+    
+    navigationItem.leftBarButtonItem = UIBarButtonItem(image: icon, style: .done, target: nil, action: nil)
   }
   
   func showMessage(_ title: String, description: String? = nil) {
