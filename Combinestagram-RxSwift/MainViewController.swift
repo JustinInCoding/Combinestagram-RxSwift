@@ -105,7 +105,11 @@ class MainViewController: UIViewController {
     // `share` allow for multiple subscriptions to consume the elements that a single Observable produces for all of them
     let newPhotos = photosViewController.selectedPhotos
       .share()
+    
     newPhotos
+      .filter { newImage in
+        return newImage.size.width > newImage.size.height
+      }
       .subscribe(
         onNext: { [weak self] newImage in
           guard let images = self?.images else { return }
@@ -116,7 +120,9 @@ class MainViewController: UIViewController {
         }
       )
       .disposed(by: bag)
+    
     navigationController!.pushViewController(photosViewController, animated: true)
+    
     newPhotos
       .ignoreElements()
       .subscribe(
