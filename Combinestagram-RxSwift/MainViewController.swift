@@ -48,23 +48,26 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
     // subscribe for .next events emitted by images
     images
+      // filters any elements followed by another element within the specified time interval
+      // 500 milliseconds equal to 0.5 seconds but the RxTimeInterval type you use with throttle does not allow for fractions so we use 500 milliseconds instead of setting the interval in seconds
+      .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
       .subscribe(
-        onNext: { [weak imagePreview] photos in
+        onNext: { [weak self, imagePreview] photos in
           guard let preview = imagePreview else { return }
-          
           preview.image = photos.collage(size: preview.frame.size)
+          self?.updateUI(photos: photos)
         }
       )
       // add this subscription to the view controller’s dispose bag
       .disposed(by: bag)
     
-    images
-      .subscribe(
-        onNext: { [weak self] photos in
-          self?.updateUI(photos: photos)
-        }
-      )
-      .disposed(by: bag)
+//    images
+//      .subscribe(
+//        onNext: { [weak self] photos in
+//          self?.updateUI(photos: photos)
+//        }
+//      )
+//      .disposed(by: bag)
   }
   
   // All of the logic is in a single place and easy to read through
@@ -78,6 +81,7 @@ class MainViewController: UIViewController {
   @IBAction func actionClear() {
     images.accept([])
     imageCache = []
+    navigationItem.leftBarButtonItem = nil
   }
   
   @IBAction func actionSave() {
