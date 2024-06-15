@@ -11,6 +11,7 @@
 		980A674F2C15C053000DA0B5 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A674E2C15C053000DA0B5 /* UIViewController+Rx.swift */; };
 		985E857A2C157EA200785952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C2FB2C154853001AF7E0 /* Main.storyboard */; };
 		985E857B2C157EA200785952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C3002C154856001AF7E0 /* LaunchScreen.storyboard */; };
+		987C8C732C1DB9CE009E8BD9 /* PHPhotoLibrary+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C8C722C1DB9CE009E8BD9 /* PHPhotoLibrary+Rx.swift */; };
 		98D9C2F62C154853001AF7E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C2F52C154853001AF7E0 /* AppDelegate.swift */; };
 		98D9C2F82C154853001AF7E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C2F72C154853001AF7E0 /* SceneDelegate.swift */; };
 		98D9C2FF2C154856001AF7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C2FE2C154856001AF7E0 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		27319224BEEF91C85F4FA474 /* Pods_Combinestagram_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Combinestagram_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980A674E2C15C053000DA0B5 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		987C8C722C1DB9CE009E8BD9 /* PHPhotoLibrary+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Rx.swift"; sourceTree = "<group>"; };
 		98D9C2F22C154853001AF7E0 /* Combinestagram-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combinestagram-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D9C2F52C154853001AF7E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D9C2F72C154853001AF7E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				98D9C3132C1558C7001AF7E0 /* PhotosViewController.swift */,
 				98D9C3152C1561FE001AF7E0 /* PhotoCell.swift */,
 				980A674E2C15C053000DA0B5 /* UIViewController+Rx.swift */,
+				987C8C722C1DB9CE009E8BD9 /* PHPhotoLibrary+Rx.swift */,
 			);
 			path = "Combinestagram-RxSwift";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				98D9C3162C1561FE001AF7E0 /* PhotoCell.swift in Sources */,
 				98D9C2F62C154853001AF7E0 /* AppDelegate.swift in Sources */,
 				98D9C3122C1556BB001AF7E0 /* MainViewController.swift in Sources */,
+				987C8C732C1DB9CE009E8BD9 /* PHPhotoLibrary+Rx.swift in Sources */,
 				98D9C3142C1558C7001AF7E0 /* PhotosViewController.swift in Sources */,
 				98D9C2F82C154853001AF7E0 /* SceneDelegate.swift in Sources */,
 				980A674F2C15C053000DA0B5 /* UIViewController+Rx.swift in Sources */,
